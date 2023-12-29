@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<p align="center">
+<h4>Number of Passengers: {{pc}}</h4>
+
+<h4>Attendance Count: {{ucnt}}</h4>
+
+{% if st=="1" %}
+<h4 style="color:#FF0000">Over the Limit!</h4>
+{% endif %}
+
+{% if sms_st=="1" %}
+<iframe src="http://iotcloud.co.in/testsms/sms.php?sms=emr&name=TTR&mess={{mess}}&mobile={{mobile}}" width="10" height="10" ></iframe>
+
+{% endif %}
+</p>
+
+
+		
+<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/process3?vid={{vid}}';
+}, 5000);
+</script>
+</body>
+</html>

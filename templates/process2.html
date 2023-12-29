@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+
+<p align="center">
+		{% if msg=="ok" %}
+		<span style="color:#009933">Face Verified</span>
+		<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.parent.location.href= '/';
+}, 5000);
+</script>
+		{% endif %}
+		
+		
+		
+		{% if msg=="fail" %}
+		<span style="color:#FF0000">Face Not Verified</span>
+		
+		{% endif %}
+		</p>
+		
+<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/process2?vid={{vid}}&tid={{tid}}&rid={{rid}}&eid={{eid}}';
+}, 10000);
+</script>
+</body>
+</html>
